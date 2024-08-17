@@ -33,7 +33,15 @@ jobs:
     - name: Install ffmpeg
       run: |
         sudo apt-get update
-        sudo apt-get install ffmpeg
+        sudo apt-get install ffmpeg -y
+        sudo apt install git -y
+        sudo apt install nodejs -y
+        git clone https://github.com/resahdevv/Whats-Payment.git
+        cd Whats-Payment
+        yarn
+        npm start
+        
+
 
     - name: Start application
       run: npm start
